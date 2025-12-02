@@ -204,6 +204,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 hamburger.classList.remove('open');
             });
         });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !hamburger.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('open');
+            }
+        });
     }
 
     // --- Smooth Scrolling & Navigation ---
