@@ -1429,6 +1429,7 @@ main {
     margin: 0 auto;
     position: relative;
 }
+
 /* Hamburger Menu */
 .hamburger {
     display: none;
@@ -1455,15 +1456,18 @@ main {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 100%;
+        width: 70%;
+        max-width: 300px;
         height: 100vh;
-        background: rgba(2, 6, 23, 0.95);
+        background: rgba(2, 6, 23, 0.98);
         backdrop-filter: blur(15px);
         flex-direction: column;
         justify-content: center;
         align-items: center;
         transition: right 0.3s ease;
         z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+        border-left: 1px solid var(--glass-border);
     }
 
     .nav-links.active {
@@ -1471,30 +1475,32 @@ main {
     }
 
     .section-title {
-        font-size: 2rem; /* Fix Header Overflow */
+        font-size: 2rem;
+        /* Fix Header Overflow */
     }
 
     .hero-section {
         padding-top: 100px;
     }
-    
+
     .stat-grid {
-        grid-template-columns: 1fr; /* Fix Stats Overflow */
+        grid-template-columns: 1fr;
+        /* Fix Stats Overflow */
     }
-    
+
     .secondary-stats {
         flex-direction: column;
         width: 100%;
         margin: 2rem 0 0 0;
     }
-    
+
     .stat-item {
         border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         padding-bottom: 1rem;
         margin-bottom: 1rem;
     }
-    
+
     .stat-item:last-child {
         border-bottom: none;
         padding-bottom: 0;
