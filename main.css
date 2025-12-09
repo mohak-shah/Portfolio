@@ -836,6 +836,7 @@ header nav {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    position: relative;
 }
 
 .cert-card:hover {
@@ -877,6 +878,21 @@ header nav {
 .cert-card:hover .cert-icon svg {
     stroke: var(--accent-color);
     filter: drop-shadow(0 0 5px var(--accent-color));
+}
+
+.view-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: var(--text-color);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.cert-card:hover .view-icon {
+    color: var(--accent-color);
+    opacity: 1;
+    transform: scale(1.1);
 }
 
 .cert-tag.ongoing {
